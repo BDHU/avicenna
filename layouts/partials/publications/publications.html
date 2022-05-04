@@ -9,7 +9,9 @@
         {{ range $page := $rscPages}}
         <div class="publication row  w-100">
 
-            <div class="section-1 w-100">
+            {{$page.Content}}
+
+            <!-- <div class="section-1 w-100">
                 <span>
                     {{$page.Params.title}},
                 </span>
@@ -55,7 +57,7 @@
                 {{end}}
             </div>
             {{end}}
-
+ -->
 
 
         </div>

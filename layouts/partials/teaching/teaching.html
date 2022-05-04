@@ -1,0 +1,22 @@
+{{ $content_type := .Params.content_type }}
+{{ $teachingPage := .Site.GetPage $content_type }}
+
+{{ $teaching_items := $teachingPage.Params.teaching_items }}
+{{ $show_teaching_icons := $teachingPage.Params.show_teaching_icons }}
+
+{{ $default_teaching_icon := "" }}
+{{ if $show_teaching_icons }}
+{{ $default_teaching_icon = $teachingPage.Params.default_teaching_icon }}
+{{ end }}
+
+{{ $teaching_icon := $default_teaching_icon }}
+
+{{ $num_teaching_to_show := $teachingPage.Params.num_teaching }}
+<div class="news row w-100">
+    <div class="col w-100">
+
+        {{$teachingPage.Content}}
+
+       
+    </div>
+</div>
