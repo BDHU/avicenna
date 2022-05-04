@@ -18,7 +18,7 @@
     <div class="row w-100 justify-content-center">
         {{ range $key, $value := $aboutPage.Params.affiliations }}
         <div class="row w-100 justify-content-center" id="title-name">
-            <span class="main_color" id="title" style="min-width: 1px;">  <!-- hack for safari -->
+            <span class="main_color" id="title" style="white-space: nowrap;">  <!-- hack for safari -->
                 {{$value.affiliation.title}},
             </span>
             <span id="name" class="text-muted">
