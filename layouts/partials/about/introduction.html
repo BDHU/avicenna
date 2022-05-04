@@ -18,15 +18,15 @@
     <div class="row w-100 justify-content-center">
         {{ range $key, $value := $aboutPage.Params.affiliations }}
         <div class="row w-100 justify-content-center" id="title-name">
-            <!-- <span class="main_color" id="title">
+            <span class="main_color" id="title" style="min-width: 1px;">  <!-- hack for safari -->
                 {{$value.affiliation.title}},
             </span>
             <span id="name" class="text-muted">
                 {{$value.affiliation.name}}
-            </span> -->
-            <span id="name" class="text-muted">
-                {{$value.affiliation.description}}
             </span>
+            <!-- <span id="name" class="text-muted">
+                {{$value.affiliation.description}}
+            </span> -->
         </div>
         <div class="row w-100 justify-content-center text-muted" id="email">
             {{$value.affiliation.email}}
